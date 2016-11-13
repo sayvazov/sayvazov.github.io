@@ -1,7 +1,8 @@
 body{
 	margin:0;
 	border:0;
-	background: #EEEEEE;
+	background: #aaa;
+    color: white;
 }
 
 p {
@@ -20,7 +21,8 @@ p {
 .header {
 	display: flex;
 	justify-content: space-around;
-	background-color: black;
+	background-color: EAC67A;
+    border: solid 10px black;
 	height: 15vh;
 	align-items: center;
 }
@@ -43,11 +45,11 @@ p {
 }
 
 .blue{
-	background: #7A9ACE;
+	background: #233237;
 }
 
 .green{
-	background: #7ACE9A}
+	background: #98434B}
 
 .yellow{
 	background: #DFD3AB;
@@ -64,7 +66,7 @@ p {
 	border-radius: 10vw;
 	margin:4vw;
 	float: left;
-	background: #999;
+    background: #ddd;
 }
 
 
