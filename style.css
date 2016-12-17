@@ -95,7 +95,12 @@ canvas {
 #bubble0 .bubbleText
 {
 	top: 20%;
+	font-size: 150%;
+}
+#bubble0 .bubbleText .tag
+{
 	font-size: 200%;
+}
 }
 
 	
