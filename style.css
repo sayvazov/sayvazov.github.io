@@ -1,106 +1,101 @@
+
+/* General CSS */
 body{
 	margin:0;
 	border:0;
-	background: #aaa;
-    color: white;
+	background: #26004d;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
 }
 
-p {
-	text-indent: 2em;
+
+
+/* Canvas CSS */
+canvas {
+	position: absolute;
 }
 
-.title
+
+/* Static Bubble CSS and initial Bubble Behaviour */
+.bubble
 {
-	font-weight: bold;
+	width: 15vw;
+	height: 15vw;
+	position: absolute;
+	display: inline-block;
+	border-radius: 50%;
+	border: 2px solid white;
+	overflow: hidden;
+	transition: width 1s, height 1s, font-size 2s, transform 1s ;
 }
 
-.fixed-section{
-	margin: 10vh 25vw 5vh 25vw;
+.bubble img
+{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	opacity: .4;
+	transition: opacity .5s ease-in-out;
 }
 
-.header {
-	display: flex;
-	justify-content: space-around;
-	background-color: EAC67A;
-    border: solid 10px black;
-	height: 15vh;
-	align-items: center;
-}
-
-.header a{
+.bubble .bubbleText
+{
+	position: absolute;
+	top: 35%;
 	text-align: center;
-	font-size: 150%;
+	color: grey;
+	width: 100%;
+	font-size: 100%;
+	transition: color 1s;
+}
+
+.bubble .bubbleText .detail
+{
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
+}
+
+.bubble .bubbleText .tag 
+{
+	transition: transform 1s ease-in-out;
+}
+
+/* Bubble Hover Behaviour */
+
+.bubble:hover 
+{
+	width: 20vw;
+	height: 20vw;
+	transform: translate(-2.5vw, -2.5vw);
+}
+
+.bubble:hover img{
+	opacity: 0.7;
+}
+
+.bubble:hover .bubbleText{
+	color: white;
+}
+
+.bubble:hover .bubbleText .detail
+{
+	opacity: 1;
+}
+
+.bubble:hover .bubbleText .tag
+{
+	transform: scale(1.5);
 	
 }
 
-.header a:link, 
-.header a:visited {
-	color: white;
-	text-decoration: none;
-}
-
-.row{
-	width: 90vw;
-	margin: 0 auto;
-}
-
-.blue{
-	background: #233237;
-}
-
-.green{
-	background: #98434B}
-
-.yellow{
-	background: #DFD3AB;
-}
-
-.pink{
-	background: #DFB9D7;
-}
-
-.filler-circle{
-	width: 10vw;
-	height: 10vw;
-	border-color: white;
-	border-radius: 10vw;
-	margin:4vw;
-	float: left;
-    background: #ddd;
-}
 
 
-
-.content-circle {
-	width: 18vw;
-	height: 10vw;
-	margin: 4vw 0 0 0;
-	overflow: none;
-	text-align: center;
-	float: left;
-	transition-duration: 2s
-}
-
-.content-circle img{
-	margin: 0 4vw 0 4vw;
-	width: 10vw;
-	height: 10vw;
-	border-radius: 50%;
-	transition-duration:2s;
-}
-
-.content-circle:hover{
-	width: 18vw;
-	height: 18vw;
-	margin: 0;
-	transition-duration: 2s;
-}
-
-.content-circle:hover img {
-	width: 14vw;
-	height: 14vw;
-	transition-duration: 2s;
-	margin: 0 2vw 0 2vw;
+#bubble0 .bubbleText
+{
+	top: 20%;
+	font-size: 200%;
 }
 
 	
