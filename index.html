@@ -4,11 +4,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-	<canvas id='display' width='1' height='1'></canvas>
+	<canvas id='display' width='95vw' height='95vh'></canvas>
 	
 		
 	<div id="bubbles">
-		<div id="bubble0" class ="bubble">
+		<div id="bubble0" class ="bubble" onclick="scatterAround(0);" >
 			<div class="bubbleText">
 				<p class="tag">
 					Hello
@@ -20,49 +20,42 @@
 			</div>
 		</div>
         
-		<div id="bubble1" class="bubble">
-            <a href= "http://www.github.com/sayvazov">
-				<img src="github.png"/>
-				
-				<div class ="bubbleText">
-					<p class="tag">
-						Github
-					</p>
-					<p class="detail">
-						Mostly unfinished class projects <br>
-						for now.
-					</p>
-				</div>
-			</a>
+		<div id="bubble1" class="bubble" onclick="scatterAround(1);">
+			<img src="github.png"/>
+			<div class ="bubbleText">
+				<p class="tag">
+					Github
+				</p>
+				<p class="detail">
+					Mostly unfinished class projects <br>
+					for now.
+				</p>
+			</div>
         </div> 
 		
-        <div id="bubble2" class="bubble">
-            <a href= "resume.pdf">
-				<img src="resume.png"/>
-				<div class ="bubbleText">
-					<p class="tag">
-						Resume
-					</p>
-					<p class="detail">
-						My current Resume.
-					</p>
-				</div>
-			</a>
+        <div id="bubble2" class="bubble" onclick="scatterAround(2);">
+			<img src="resume.png"/>
+			<div class ="bubbleText">
+				<p class="tag">
+					Resume
+				</p>
+				<p class="detail">
+					My current Resume.
+				</p>
+			</div>
         </div> 
 		
-        <div id="bubble3" class="bubble">
-            <a href="https://devpost.com/software/a-space-team">
-				<img src="Space Game.jpg"/>
-				<div class ="bubbleText">
-					<p class="tag">
-						A Space Game
-					</p>
-					<p class="detail">
-						Winner: SD Hacks <br>
-						Best Use of VR/AR
-					</p>
-				</div>
-			</a>
+        <div id="bubble3" class="bubble" onclick="scatterAround(3);">
+			<img src="Space Game.jpg"/>
+			<div class ="bubbleText">
+				<p class="tag">
+					A Space Game
+				</p>
+				<p class="detail">
+					Winner: SD Hacks <br>
+					Best Use of VR/AR
+				</p>
+			</div>
         </div> 
 		
     </div>

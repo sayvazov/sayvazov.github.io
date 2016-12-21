@@ -28,8 +28,8 @@ Particle.prototype.draw = function() {
 var ctx = display.getContext('2d');
 
 var particles = [];
-var width = display.width = window.innerWidth;
-var height = display.height = window.innerHeight;
+var width = display.width = window.innerWidth*99/100 ;
+var height = display.height = window.innerHeight*99/100;
 
 for (var i = 0; i < 100; i++) {
 	particles[i] = new Particle(Math.random() * width, Math.random() * height, Math.random()*3, 0);

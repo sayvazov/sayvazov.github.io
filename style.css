@@ -28,7 +28,8 @@ canvas {
 	border-radius: 50%;
 	border: 2px solid white;
 	overflow: hidden;
-	transition: width 1s, height 1s, font-size 2s, transform 1s ;
+	transition: all 1s, font-size 2s;
+	cursor: pointer;
 }
 
 .bubble img
