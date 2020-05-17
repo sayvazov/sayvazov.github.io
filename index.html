@@ -1,65 +1,123 @@
-<!DOCTYPE html>
-<head> 
-	<link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-</head>
-<body>
-	<canvas id='display' width='95vw' height='95vh'></canvas>
-	
-		
-	<div id="bubbles">
-		<div id="bubble0" class ="bubble" onclick="scatterAround(0);" >
-			<div class="bubbleText">
-				<p class="tag">
-					Hello
-				</p>
-				<p class="detail">
-					My Name is Sasha. <br>
-					This is my website.
-				</p>
-			</div>
-		</div>
-        
-		<div id="bubble1" class="bubble" onclick="scatterAround(1);">
-			<img src="github.png"/>
-			<div class ="bubbleText">
-				<p class="tag">
-					Github
-				</p>
-				<p class="detail">
-					Mostly unfinished class projects <br>
-					for now.
-				</p>
-			</div>
-        </div> 
-		
-        <div id="bubble2" class="bubble" onclick="scatterAround(2);">
-			<img src="resume.png"/>
-			<div class ="bubbleText">
-				<p class="tag">
-					Resume
-				</p>
-				<p class="detail">
-					My current Resume.
-				</p>
-			</div>
-        </div> 
-		
-        <div id="bubble3" class="bubble" onclick="scatterAround(3);">
-			<img src="Space Game.jpg"/>
-			<div class ="bubbleText">
-				<p class="tag">
-					A Space Game
-				</p>
-				<p class="detail">
-					Winner: SD Hacks <br>
-					Best Use of VR/AR
-				</p>
-			</div>
-        </div> 
-		
-    </div>
-	<script src="js/particles.js" type="text/javascript"></script>
-	<script src="js/position.js"  type="text/javascript"></script>
-</body>
-		
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="data.csv">Data</a>
+</div>
+
+<div class="intro">
+    <p>Ah.</p>
+
+    <p>Welcome, young seeker.</p>
+
+    <p>You wish to know your fate. You wish to know yourself.</p>
+
+    <p>This is... wise. Alas, were we in person, my crystal eye would see straight through you. But Zoom is a primitive technology, so we must resort to more barbaric means.</p>
+
+    <p>Sliders.</p>
+
+    <p>A more elegant weapon for a more... civilized age.</p>
+
+    <p>Slide these sweet puppies around. Move 'em back and forth. And then let them show you who you truly are.</p>
+
+    <p>It may seem like a slider has two sides.</p>
+
+    <p>But sliders are like all of us - really just hollow tubes of flesh, waiting to be filled with wisdom.</p>
+
+    <p>So come. Learn the truth. If you dare.</p>
+</div>
+<div class="slidecontainer">
+    <p>What is your slider <b>AESTHETIC</b>?</p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="aesthetic_slider">
+    
+    <div id="aesthetic_result"></div>
+</div>
+
+
+<div class="slidecontainer">
+    <p>But art thou <b>BASIC</b>?</p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="basic_slider">
+    
+    <div id="basic_result"></div>
+</div>
+
+
+<div class="slidecontainer">
+    <p>Shoop a whoop <b>CHAOTIC</b> orangutan?</p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="chaotic_slider">
+    
+    <div id="chaotic_result"></div>
+</div>
+
+
+<div class="slidecontainer">
+    <p>How <b>KINKY</b> are you? ;)</p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="kinky_slider">
+    
+    <div id="kinky_result"></div>
+</div>
+
+
+<div class="slidecontainer">
+    <p>And are you <b>MAJESTIC</b>, like a royal steed? </p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="majestic_slider">
+    
+    <div id="majestic_result"></div>
+</div>
+
+
+<div class="slidecontainer">
+    <p>Are you <b>NIHILISTIC</b>? As if I give a damn.</p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="nihilistic_slider">
+    
+    <div id="nihilistic_result"></div>
+</div>
+
+
+<div class="slidecontainer">
+    <p>How <b>QUIRKY</b> are you, on a scale from how quirky Zooey Deschanel actually is, to how quirky she thinks she is?</p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="quirky_slider">
+    
+    <div id="quirky_result"></div>
+</div>
+
+<div class="slidecontainer">
+    <p>How <b>RIGOROUS</b> are you? Please provide a well-researched defense of this selection in an email to your SOSC professor. </p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="rigorous_slider">
+    
+    <div id="rigorous_result"></div>
+</div>
+
+<div class="slidecontainer">
+    <p>But can you handle the <b>SPICY</b>?</p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="spicy_slider">
+    
+    <div id="spicy_result"></div>
+</div>
+
+<div class="slidecontainer">
+    <p>How <b>WHOLESOME</b> are you? Place yourself on a scale from shy midwestern first-year before their first party to to shy midwestern first-year during their first party. </p>
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="wholesome_slider">
+    
+    <div id="wholesome_result"></div>
+</div>
+
+<div class = "resultcontainer">
+    
+    <h1>Result</h1>
+    <button type="button" id="result_button">Calculate My Identity</button>
+    
+    <div id="result_text"></div>
+</div>
+
+<script src="script.js"></script>
