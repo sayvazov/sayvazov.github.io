@@ -195,10 +195,14 @@ for (var i= 0; i < items.length; i++) {
     averages_by_item.push(average_by_word);
 }
 // console.log(averages_by_item);
-
+distances = []
+closest_item_distance = Infinity;
+furthest_item_distance = 0;
 function calculate_result() {
     closest_item = -1
     closest_item_distance = Infinity;
+    furthest_item_distance = 0;
+    distances = []
     for (var i = 0; i < items.length; i++) {
         sum_square_distance = 0;
         for (word in sliders_by_word) {
@@ -210,6 +214,14 @@ function calculate_result() {
             closest_item_distance = sum_square_distance;
             closest_item = i;
         }
+        
+        if (sum_square_distance > furthest_item_distance) {
+            
+            furthest_item_distance = sum_square_distance;
+        }
+        console.log(i);
+        console.log(furthest_item_distance);
+        distances.push(sum_square_distance);
     }
 
     console.log(closest_item);
@@ -222,4 +234,44 @@ function calculate_result() {
 
 result_button = document.getElementById("result_button");
 result_button.onclick = calculate_result;
+
+function show_details() {
+    console.log(furthest_item_distance);
+    canvas = document.getElementById("detail_canvas");
+    
+
+    var ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0,50,1000,3);
+    first_words = []
+    for (var i = 0; i < items.length ; i++) {
+        word = items[i].split(" ")[0];
+        first_words.push(word);
+    }
+    console.log(first_words);
+
+    ctx.fillRect(500, 40, 1, 20);
+    ctx.fillText("You", 500, 40);
+    for (var i = 0; i < items.length ; i++) {
+        distance = distances[i] / furthest_item_distance * 500;
+        if (i%2 == 0)
+            distance *= -1;
+        distance = distance + 500;
+        word = first_words[i];
+        console.log(word);
+        console.log(distance);
+
+        ctx.fillRect(distance, 40, 1, 20);
+        ctx.fillText(word, distance, 40);
+    }
+    
+    explainer = document.getElementById("details_text");
+    for (var i = 0 ; i < items.length; i++) {
+        explainer.innerHTML += "<p>" + items[i] + "</p>";
+    }
+}
+
+detail_button = document.getElementById("details");
+detail_button.onclick = show_details;
+
 //calculate_result();
