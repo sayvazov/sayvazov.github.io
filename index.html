@@ -1,128 +1,73 @@
-<link rel="stylesheet" type="text/css" href="style.css" />
-
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="data.csv">Data</a>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+<div id="title">
+    Kirsten and Sasha <br>
+    Are Getting Married!
 </div>
 
-<div class="intro">
-    <p>Ah.</p>
-
-    <p>Welcome, young seeker.</p>
-
-    <p>You wish to know your fate. You wish to know yourself.</p>
-
-    <p>This is... wise. Alas, were we in person, my crystal eye would see straight through you. But Zoom is a primitive technology, so we must resort to more barbaric means.</p>
-
-    <p>Sliders.</p>
-
-    <p>A more elegant weapon for a more... civilized age.</p>
-
-    <p>Slide these sweet puppies around. Move 'em back and forth. And then let them show you who you truly are.</p>
-
-    <p>It may seem like a slider has two sides.</p>
-
-    <p>But sliders are like all of us - really just hollow tubes of flesh, waiting to be filled with wisdom.</p>
-
-    <p>So come. Learn the truth. If you dare.</p>
-</div>
-<div class="slidecontainer">
-    <p>What is your slider <b>AESTHETIC</b>?</p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="aesthetic_slider">
-    
-    <div id="aesthetic_result"></div>
+<div id="landing-image">
+    <img src="images/selves filled.png"/>
 </div>
 
-
-<div class="slidecontainer">
-    <p>But art thou <b>BASIC</b>?</p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="basic_slider">
-    
-    <div id="basic_result"></div>
+<div id="subtitle">
+    And you're invited! <br>
+    Probably
 </div>
 
-
-<div class="slidecontainer">
-    <p>Shoop a whoop <b>CHAOTIC</b> orangutan?</p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="chaotic_slider">
-    
-    <div id="chaotic_result"></div>
+<div id="rsvp-link" class="link">
+    <a href="rsvp.html">
+        <img src="images/RSVP.png"
+        onmouseover="this.src='images/RSVP-hover.png'; this.style.transform='rotate(15deg)';"
+        onmouseout="this.src='images/RSVP.png';this.style.transform='rotate(0deg)';"
+        />
+    </a>
+    RSVP
 </div>
 
-
-<div class="slidecontainer">
-    <p>How <b>KINKY</b> are you? ;)</p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="kinky_slider">
-    
-    <div id="kinky_result"></div>
+<div id="faq-link" class="link">
+    <a href="faq.html">
+        <img src="images/FAQ.png"
+        onmouseover="this.src='images/FAQ-hover.png'; this.style.transform='rotate(15deg)';"
+        onmouseout="this.src='images/FAQ.png'; this.style.transform='rotate(0deg)';"
+        />
+    </a>
+    FAQ
 </div>
 
-
-<div class="slidecontainer">
-    <p>And are you <b>MAJESTIC</b>, like a royal steed? </p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="majestic_slider">
-    
-    <div id="majestic_result"></div>
+<div id="details-link" class="link">
+    <a href="details.html">
+        <img src="images/notepad.png"
+        onmouseover="this.src='images/notepad-hover.png'; this.style.transform='rotate(15deg)';"
+        onmouseout="this.src='images/notepad.png'; this.style.transform='rotate(0deg)';"
+        />
+    </a>
+    Details
 </div>
 
-
-<div class="slidecontainer">
-    <p>Are you <b>NIHILISTIC</b>? As if I give a damn.</p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="nihilistic_slider">
-    
-    <div id="nihilistic_result"></div>
+<div id="todo-link" class="link">
+    <a href="nyc.html">
+        <img src="images/bike.png"
+        onmouseover="this.src='images/bike-hover.png'; this.style.transform='rotate(15deg)';"
+        onmouseout="this.src='images/bike.png'; this.style.transform='rotate(0deg)';"
+        />
+    </a>
+    NYC
 </div>
 
+<!--
+RSVP - Envelope, open envelope
+FAQ - Question Bubbles
+Details - Notebook
+Things to Do - Skyline
+Registry - Present
+Countdown
 
-<div class="slidecontainer">
-    <p>How <b>QUIRKY</b> are you, on a scale from how quirky Zooey Deschanel actually is, to how quirky she thinks she is?</p>
+Wedding Party
 
-    <input type="range" min="1" max="100" value="50" class="slider" id="quirky_slider">
-    
-    <div id="quirky_result"></div>
-</div>
+-->
 
-<div class="slidecontainer">
-    <p>How <b>RIGOROUS</b> are you? Please provide a well-researched defense of this selection in an email to your SOSC professor. </p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="rigorous_slider">
-    
-    <div id="rigorous_result"></div>
-</div>
-
-<div class="slidecontainer">
-    <p>But can you handle the <b>SPICY</b>?</p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="spicy_slider">
-    
-    <div id="spicy_result"></div>
-</div>
-
-<div class="slidecontainer">
-    <p>How <b>WHOLESOME</b> are you? Place yourself on a scale from shy midwestern first-year before their first party to to shy midwestern first-year during their first party. </p>
-
-    <input type="range" min="1" max="100" value="50" class="slider" id="wholesome_slider">
-    
-    <div id="wholesome_result"></div>
-</div>
-
-<div class = "resultcontainer">
-    
-    <h1>Result</h1>
-    <button type="button" id="result_button">Calculate My Identity</button>
-    
-    <div id="result_text"></div>
-
-    <button type="button" id="details">Show Detailed Analysis </button>
-
-    <canvas id="detail_canvas" width="1200" height="100"></canvas>
-    <div id="details_text"></div>
-</div>
-
-<script src="script.js"></script>
+</body>

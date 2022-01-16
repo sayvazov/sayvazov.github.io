@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/page.css">
+<script src="js/petra-background.js"></script>
+</head>
+<body>
+<nav>
+    <div class="navbar">
+        <div class="menu">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+            </div>  
+        <div class="logo">
+            <h1>FAQS</h1>
+        </div>
+        <div class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rsvp.html">RSVP</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li><a href="nyc.html">NYC</a></li>
+        </div>
+        </div>
+    </div>
+</nav>
+
+<canvas id="dog-canvas"></canvas>
+<canvas id="line-canvas"></canvas>
+
+<div id="title">
+    Frequently Asked Questions
+</div>
+<script>
+function addRemoveCollapse(element) {
+    if (element.className == "collapsed") {
+        element.className = "expanded"
+    }
+    else {
+        element.className = "collapsed"
+    }
+    console.log(element.className);
+}
+</script>
+
+
+<div id="content">
+    <li class="collapsed" onclick="addRemoveCollapse(this)">
+        <div class="question">
+            What is the dress code?
+        </div>
+        <div class="answer">
+            Let's call it Cocktail. We enjoy the opportunity to glitz up, and we hope you do too. You will not be turned away at the door if you underdress, but you'll feel awkward and when we look back at the photos, everyone will roll their eyes and say, "Oh, William". Early May in NYC could be the last freezing rainstorm, or a beautiful sunny day, so we recommend being prepared. The venue is climate controlled, and there is an outdoor patio with gorgeous views. 
+        </div>
+    </li> 
+    <li class="collapsed" onclick="addRemoveCollapse(this)">
+        <div class="question">
+            So COVID is going on...
+        </div>
+        <div class="answer">
+            Yes, it is. We know that planning anything is hard right now, and weddings are even harder. We are moving forward nonetheless and hoping that things will work out. That being said, we are requiring vaccines of everyone that is attending. If you feel like you need an exception to this rule, contact us as soon as you can. Depending on recommendations, boosters may also be required. Should the state of New York put limits on the kinds of events that are allowed, the reception will be postponed. The last thing we want is for our wedding to lead to people we care about getting hurt, and we are trying to walk this line. 
+        </div>
+    </li> 
+    <li class="collapsed" onclick="addRemoveCollapse(this)">
+        <div class="question">
+            Do I need to bring anything?
+        </div>
+        <div class="answer">
+            No. I mean, you probably want your wallet and phone, and if you have small children, you certainly know what you need to bring. But for the night itself - there will be an open bar, there will be plenty of food. If you would like to bring a card, there will be a spot for them. If your card is novelty-check sized, please let us know ahead of time so we can arrange alternative transportation.
+        </div>
+    </li> 
+    <li class="collapsed" onclick="addRemoveCollapse(this)">
+        <div class="question">
+            Is there going to be anything other than salad?
+        </div>
+        <div class="answer">
+            Obviously. If you know Kirsten and Sasha, you know that our relationship is primarily organized around what's for dinner. We felt very strongly about the food at our wedding; we picked a caterer before we picked a venue. We promise it's going to be good. It's also going to be entirely vegan. Having had dietary restrictions at a wedding and having eaten that undressed salad followed by a bottle of wine, our goal is to show everyone a good time. If you, your plus one, or your children have dietary restrictions (or if you kids are just really picky), please let us know on your RSVP. Our caterer is lovely, and she'll find a way to make it work. 
+        </div>
+    </li> 
+    <li class="collapsed" onclick="addRemoveCollapse(this)">
+        <div class="question">
+            How much Malort will there be?
+        </div>
+        <div class="answer">
+            Yes.  
+        </div>
+    </li> 
+    <li class="collapsed" onclick="addRemoveCollapse(this)">
+        <div class="question">
+            Is there a registry?
+        </div>
+        <div class="answer">
+            <p>There is not. Like many other couples we know, we've been living together for a while now (scandalous!) and have acquired many of the usual things that appear on a registry. Gifts are not required or expected. Your company is more than enough.</p>
+            <p>Should you want to get us something to celebrate the occasion, we'd most appreciate something you've made, whether it's a skill you've been practicing all your life, or just one you've been looking to try. If there's some thing that you feel we'd enjoy, either because you loved it when you first got married or built up a home, or because it just reminds you of us, we would also love to receive it. If nothing comes to mind, we ask that you contribute to a charity or cause that you think we'd appreciate and tell us about it. </p>
+        </div>
+    </li> 
+    <li class="collapsed" onclick="addRemoveCollapse(this)">
+        <div class="question">
+            What's Malort?
+        </div>
+        <div class="answer">
+            Yes.  
+        </div>
+    </li> 
+    <li class="collapsed" onclick="addRemoveCollapse(this)">
+        <div class="question">
+            Sasha, Malort has an umlaut.
+        </div>
+        <div class="answer">
+            Very astute. You will be either not allowed to have any Malort, or you will be forced to have Malort, whichever you least prefer.
+        </div>
+    </li> 
+    <img id="petra1" src="images/petra run 1.png" width="500px" height="300px"/>
+    <img id="petra2" src="images/petra run 2.png" width="400px" height="300px"/>
+</div>

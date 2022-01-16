@@ -1,0 +1,103 @@
+@font-face {
+    font-family: Beeline;
+    src: url("../fonts/Beeline.otf") format("opentype");
+}
+body
+{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height: 100vh;
+}
+
+img {
+    width: 100%;
+}
+
+#landing-image
+{
+    left:0;
+    right:0;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    #landing-image{
+        width: 100%;
+    }
+}
+
+
+#landing-image img 
+{
+    width: 100%;
+    margin:auto;
+}
+#title
+{
+    font-size:6em;
+    font-family: Beeline;
+    font-weight: bold;
+    margin:auto;
+    top:20%;
+    text-align: center;
+}
+
+#subtitle
+{
+    font-size:4em;
+    font-family: Beeline;
+    font-weight: bold;
+    margin:auto;
+    text-align: center;
+}
+.link
+{
+    position: absolute;
+    font-size:4em;
+    font-family: Beeline;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+    #rsvp-link
+    {
+        top: 15%;
+        left: 15%;
+        width: 10%;
+    }
+
+    #faq-link
+    {
+        top: 50%;
+        left: 10%;
+        width: 12%;
+    }
+
+    #details-link
+    {
+        top: 15%;
+        right: 15%;
+        width: 10%;
+    }
+
+    #todo-link
+    {
+        top: 50%;
+        right: 10%;
+        width: 12%;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .link {
+        position: relative;
+        display: inline-block;
+        width: 49%;
+    }
+}
